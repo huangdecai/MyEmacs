@@ -48,10 +48,14 @@
 (global-hl-line-mode 1)
 (global-set-key (kbd "s-/") 'hippie-expand)
 
+(global-set-key (kbd "<f2>") 'open-init-file)
 ;;目录操作
 (put 'dired-find-alternate-file 'disabled nil)
 (require 'dired-x)
 (setq dired-dwim-target t)
-
+;;yasnippet 是一个代码块补全的插件（GitHub 地址）。使用下面的配置文件将其;;在所有的编程语言的模式中激活。
+(yas-global-mode 1)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 ;; 显示行号
 (provide 'init-packages)

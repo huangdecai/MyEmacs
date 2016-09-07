@@ -41,5 +41,9 @@
                          ;; if first parameter is '1', can't toggle fullscreen status
                          '(1 "_NET_WM_STATE_FULLSCREEN" 0)))
 
+(defun open-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
 
 (provide 'init-func)
